@@ -1,3 +1,8 @@
+@font-face{
+    font-family: "Candara";
+    src: url(./res/Candara.ttf);
+}
+
 html{ 
     /* Background color with browzer support, 
     /* dont think is needed but my firefox wouldn't work LOL */
