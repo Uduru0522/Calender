@@ -14,7 +14,7 @@ function date_gen(month){
     let i = 0, j = 0;
 
     /* Month container*/
-    document.writeln("<div class=\"month\">");
+    document.writeln("<div class=\"month\" id=\"" + month + "\">");
     document.writeln("<div class=\"month-title text-center\">" + month_name[month] + "</div>");
 
     /* Weekday headers */

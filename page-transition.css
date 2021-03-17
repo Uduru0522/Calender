@@ -1,8 +1,27 @@
 @keyframes scaleDown {
 	from { }
-	to { opacity: 0; -webkit-transform: scale(.8); transform: scale(.8); }
+	to { 
+		opacity: 0; 
+		-webkit-transform: scale(.8); 
+		transform: scale(.8); 
+	}
 }
 
-.scale-up-out{
+@keyframes moveFromBottom {
+	from { 
+		-webkit-transform: translateY(100%); 
+		transform: translateY(100%); 
+	}
+}
+
+.page-toTop{
+	z-index: 999;
+}
+
+.page-move-fromBottom {
+	animation: moveFromBottom .6s ease both;
+}
+
+.page-scale-up-out{
     animation: scaleDown .7s ease both;
 }
