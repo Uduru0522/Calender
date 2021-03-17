@@ -1,0 +1,8 @@
+@keyframes scaleDown {
+	from { }
+	to { opacity: 0; -webkit-transform: scale(.8); transform: scale(.8); }
+}
+
+.scale-up-out{
+    animation: scaleDown .7s ease both;
+}
