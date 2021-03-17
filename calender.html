@@ -3,25 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="calender.css">
+    <link rel="stylesheet" href="page-transition.css">
 <title>2021 CALENDER</title>
 </head>
 
 <body>
-    <div class="container">
-        <div class="header">
-            <div class="text">2021 CALENDER</div>
-            <div class="underline"></div>
-        </div>
-
-        <div class="spacing"></div>
-        <script src="date_gen.js"></script>
-
-        <div class="year">
-            <script>
-                [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].forEach(function(m){
-                    date_gen(m);
-                })
-            </script>
+    <div class="page page-year">
+        <div class="container">
+            <div class="spacing" style="height: 7.5vh"></div>
+            <div class="header">
+                <div class="text">2021 CALENDER</div>
+                <div class="underline"></div>
+            </div>
+    
+            <div class="spacing" style="height: 50px"></div>
+            <script src="date_gen.js"></script>
+    
+            <div class="year">
+                <script>
+                    [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].forEach(function(m){
+                        date_gen(m);
+                    })
+                </script>
+            </div>
+            <div class="spacing" style="height: 7.5vh"></div>
         </div>
     </div>
+
+    <!-- <div class="page page-month" id="1"></div> -->
+
+    <!-- Funcion Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="click_event.js"></script>
 </body>
