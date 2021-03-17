@@ -10,7 +10,17 @@ const month_name = [-1, "JAN", "FEB", "MAR", "APR", "MAY", "JUN",
                         "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"];
 const year = 2021;  /* Unused */
 
-function date_gen(month){
+function header_gen(top_gap = 0, bottom_gap = 0){
+    document.writeln("<div class=\"spacing\" style=\"height: 7.5vh\"></div>");
+    document.writeln("<div class=\"header\">");
+    document.writeln("<div class=\"text\">2021 CALENDER</div>");
+    document.writeln("<div class=\"underline\"></div>");
+    document.writeln("</div>");
+    document.writeln("<div class=\"spacing\" style=\"height: 50px\"></div>");
+    return;
+}
+
+function month_block_gen(month){
     let i = 0, j = 0;
 
     /* Month container*/

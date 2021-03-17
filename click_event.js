@@ -1,4 +1,4 @@
-$(".month").click(function(){
+$(".page-year .month").click(function(){
     let $year_page = $(this).closest(".page");
     console.log("#" + $(this).attr("id") + ".page-month");
     let $month_page = $("#" + $(this).attr("id") + ".page-month");

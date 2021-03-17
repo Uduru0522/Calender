@@ -167,3 +167,15 @@ html, body{
 .default-invis{
     visibility: hidden;
 }
+
+.page.page-month{
+    max-height: 100vh;
+    max-width: 100vw;
+
+    overflow-y: hidden;
+}
+
+ .page-month .month{
+    position: fixed;
+    
+}
