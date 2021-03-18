@@ -4,21 +4,15 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="calender.css">
     <link rel="stylesheet" href="page-transition.css">
+    <script src="./gen.js"></script>
 <title>2021 CALENDER</title>
 </head>
 
 <body>
     <div class="page page-year">
         <div class="container">
-            <div class="spacing" style="height: 7.5vh"></div>
-            <div class="header">
-                <div class="text">2021 CALENDER</div>
-                <div class="underline"></div>
-            </div>
-
-            <div class="spacing" style="height: 50px"></div>
-            <script src="./gen.js"></script>
-    
+            
+            <script>header_gen("7.5vh", "50px")</script>
             <div class="year">
                 <script>
                     [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].forEach(function(m){
@@ -36,13 +30,20 @@
             document.writeln("<div class=\"page page-month default-invis\" id=\"" + i + "\">");
             header_gen("10vh", "10vh");
             month_block_gen(i);
+            day_summary_gen(i);
             document.writeln("</div>");
         }
-
     </script>
+
+    <!-- For return button -->
+    <div class="return-button default-invis"></div> 
+    <div class="prev-button default-invis"></div>
+    <div class="next-button default-invis"></div>
 
     <!-- Funcion Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="./click_event.js"></script>
+    <script src="./square.js"></script>
+    <script src="hover_event.js"></script>
 </body>

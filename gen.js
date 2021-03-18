@@ -11,12 +11,12 @@ const month_name = [-1, "JAN", "FEB", "MAR", "APR", "MAY", "JUN",
 const year = 2021;  /* Unused */
 
 function header_gen(top_gap = 0, bottom_gap = 0){
-    document.writeln("<div class=\"spacing\" style=\"height: 7.5vh\"></div>");
+    document.writeln("<div class=\"spacing\" style=\"height:" + top_gap + "\"></div>");
     document.writeln("<div class=\"header\">");
     document.writeln("<div class=\"text\">2021 CALENDER</div>");
     document.writeln("<div class=\"underline\"></div>");
     document.writeln("</div>");
-    document.writeln("<div class=\"spacing\" style=\"height: 50px\"></div>");
+    document.writeln("<div class=\"spacing\" style=\"height: " + bottom_gap + "\"></div>");
     return;
 }
 
@@ -47,8 +47,6 @@ function month_block_gen(month){
             }
         }
 
-        console.log(weekday);
-
         if(weekday == 0 || weekday == 1){
             is_holiday = true;
         } 
@@ -70,5 +68,21 @@ function month_block_gen(month){
 
     document.writeln("</div>");
 
+    return;
+}
+
+let data_days = 20;
+function day_summary_gen(month){
+    document.writeln("<div class=\"scrollbar\">");
+    
+    for(let i = 1; i <= data_days; ++i){
+        document.writeln("<div class=\"summary-box\">");
+        document.writeln("<div class=\"date\" id=\"" + i + "\"><p>" + i + "</p></div>");
+        document.writeln("<p>Hello world</p>");
+        document.writeln("</div>");
+        document.writeln("<div class=\"seperation\"></div>");
+    }
+
+    document.writeln("</div>");
     return;
 }

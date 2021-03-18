@@ -14,14 +14,59 @@
 	}
 }
 
+@keyframes moveToBottom {
+	to{
+		-webkit-transform: translateY(100%); 
+		transform: translateY(100%); 
+	}
+}
+
+@keyframes appear{
+	from {
+		transform: scale(.9);
+	}
+}
+
+@keyframes fadeOut{
+	to{
+		opacity: 0.0;
+		transform: translateX(40%);
+	}
+}
+
+@keyframes fadeIn{
+	from{
+		transform: translateX(40%);
+	}
+	to{
+		opacity: 1;
+	}
+}
+
 .page-toTop{
-	z-index: 999;
+	z-index: 100;
 }
 
 .page-move-fromBottom {
-	animation: moveFromBottom .6s ease both;
+	animation: moveFromBottom .5s ease both;
+}
+
+.page-move-toBottom{
+	animation: moveToBottom .5s ease both;
 }
 
 .page-scale-up-out{
-    animation: scaleDown .7s ease both;
+    animation: scaleDown .3s ease both;
+}
+
+.appear{
+	animation: appear .3s ease both;
+}
+
+.fade-out{
+	animation: fadeOut .5s ease both;
+}
+
+.fade-in{
+	animation: fadeIn .5s ease both;
 }
